@@ -1,0 +1,51 @@
+
+body[theme=black]{
+    background: #0f0715;
+}
+body[theme=black] .section, body[theme=black] header{
+    color: #fff;
+}
+
+body[theme=cyan]{
+    background: cyan;
+}
+body[theme=cyan] .section{
+    color: rgb(0, 26, 26);
+}
+
+body[theme=white]{
+    background: white;
+}
+body[theme=white] .section{
+    color: rgb(5, 5, 5);
+}
+
+body[theme=salmon]{
+    background: salmon;
+}
+body[theme=salmon] .section{
+    color: rgb(87, 10, 2);
+}
+
+
+
+header[theme=black]{
+    background-color: #0f0715;
+    color: #fff;
+}
+
+
+header[theme=cyan]{
+    background: cyan;
+    color: rgb(0, 26, 26);
+}
+
+header.active{
+    background: #000;
+    color: #fff;
+}
+
+
+
+
+
