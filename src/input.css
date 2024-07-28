@@ -97,10 +97,9 @@ body{
     @apply w-full;
 }
 .menuItem a{
-    @apply md:text-[60px] text-4xl font-bold uppercase text-white;
+    @apply md:text-[60px] text-4xl font-bold uppercase text-white leading-tight;
     -webkit-text-stroke: 1px #fff;
     -webkit-text-fill-color: transparent;
-    margin: 0;
 }
 
 

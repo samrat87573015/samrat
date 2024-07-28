@@ -1287,6 +1287,7 @@ body{
   line-height: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.25;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1300,7 +1301,6 @@ body{
 .menuItem a{
   -webkit-text-stroke: 1px #fff;
   -webkit-text-fill-color: transparent;
-  margin: 0;
 }
 
 .hover\:rotate-0:hover{
