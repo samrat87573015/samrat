@@ -84,3 +84,123 @@ function bodyColorChangeAnimation(){
 
 }
 bodyColorChangeAnimation();
+
+function scollSliderAnimation() {
+    gsap.to(".slider_item", {
+        scrollTrigger: {
+            trigger: ".scrol_slider_area",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 2,
+        },
+        xPercent: -200,
+        ease: Power4,
+    });
+}
+scollSliderAnimation();
+
+gsap.to('.abright_box', {
+    scrollTrigger: {
+        trigger: '.about',
+        start: "top 30%",
+        end: "bottom bottom",
+        scrub: 3,
+
+    },
+    y: 100,
+    ease: Power4,
+    duration: 3,
+    stagger: 0.03,
+})
+
+
+Shery.mouseFollower({
+    //Parameters are optional.
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: .3,
+});
+
+Shery.makeMagnet(".magnet" /* Element to target.*/, {
+    //Parameters are optional.
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: .3,
+});
+
+Shery.textAnimate(".textAnimate" /* Element to target.*/, {
+    //Parameters are optional.
+    style: 2,
+    y: 10,
+    delay: 0.1,
+    duration: .3,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    multiplier: 0.1,
+});
+
+
+gsap.to('.project_item', {
+    scrollTrigger: {
+        trigger: '.project_area',
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 3,
+    },
+    y: 0,
+    ease: Power4,
+    duration: 3,
+    stagger: 3,
+});
+
+Shery.imageMasker(".mask-target" /* Element to target.*/, {
+    //Parameters are optional.
+    mouseFollower: true,
+    text: "Shery",
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+});
+
+const menubar = document.querySelector(".menubar");
+const nav = document.querySelector(".menu_area");
+const header = document.querySelector("header");
+
+const menubarIcons = document.querySelectorAll('.menubar span');
+menubar.addEventListener("click", function () {
+  nav.classList.toggle("active");
+  header.classList.toggle("active");
+  menubarIcons.forEach(function (e) {
+    e.classList.toggle("active");
+  });
+});
+
+
+function teamAnimation() {
+    let teamItem = document.querySelectorAll(".team_item");
+
+    teamItem.forEach(function (el) {
+        el.addEventListener("mousemove", function (dets) {
+            let teamImg = this.querySelector(".team_img");
+            gsap.to(teamImg, {
+                x: gsap.utils.mapRange(0, window.innerWidth, -200, 200, dets.clientX),
+                scale: 1,
+                ease: Power4,
+                duration: 0.5,
+            });
+        });
+
+        el.addEventListener("mouseleave", function (dets) {
+            let teamImg = this.querySelector(".team_img");
+            gsap.to(teamImg, {
+                scale: 0,
+                ease: Power4,
+                duration: 0.5,
+            });
+        });
+    });
+}
+teamAnimation();
+
+
+
+
+
+

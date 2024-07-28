@@ -1,51 +1,125 @@
 
-body[theme=black]{
+/*darkParpel color*/
+body[theme=darkParpel]{
     background: #0f0715;
 }
-body[theme=black] .section, body[theme=black] header{
+body[theme=darkParpel] .section, body[theme=darkParpel] header{
+    color: #fff;
+}
+body[theme=darkParpel] .menubar span{
+    background: #fff;
+}
+header[theme=darkParpel]{
     color: #fff;
 }
 
+
+/*black color*/
+body[theme=black]{
+    background: #000;
+}
+
+body[theme=black] .section, body[theme=black] header{
+    color: #fff;
+}
+body[theme=black] .menubar span{
+    background: #fff;
+}
+body[theme=black] .project_item{
+    background: #000;
+}
+header[theme=black]{
+    color: #fff;
+}
+
+
+/*cyan color*/
 body[theme=cyan]{
     background: cyan;
 }
 body[theme=cyan] .section{
     color: rgb(0, 26, 26);
 }
+body[theme=cyan] .menubar span{
+    background: #000;
+}
 
+header[theme=cyan]{
+    color: rgb(0, 26, 26);
+}
+
+/*white color*/
 body[theme=white]{
     background: white;
 }
 body[theme=white] .section{
     color: rgb(5, 5, 5);
 }
-
-body[theme=salmon]{
-    background: salmon;
-}
-body[theme=salmon] .section{
-    color: rgb(87, 10, 2);
+header[theme=white]{
+    color: #000;
 }
 
-
-
-header[theme=black]{
-    background-color: #0f0715;
-    color: #fff;
+body[theme=white] .menubar span{
+    background: #000;
+}
+body[theme=white] .project_item{
+    background: #fff;
+}
+header{
+    background: transparent;
+    -webkit-backdrop-filter: blur(9.84375px);
+    backdrop-filter: blur(9.84375px);
+    webkit-backdrop-filter: blur(5px);
 }
 
-
-header[theme=cyan]{
-    background: cyan;
-    color: rgb(0, 26, 26);
-}
 
 header.active{
     background: #000;
     color: #fff;
 }
+.menuItem{
+    padding-right: 20px;
+}
 
+.menu_area{
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: all .3s ease;
+}
+.menu_area.active{
+    transform: translateY(0);
+    visibility: visible;
+}
+.menubar span{
+    width: 40px;
+}
+body[theme=darkParpel] header.active .menubar span, body[theme=black] header.active .menubar span, body[theme=white] header.active .menubar span, body[theme=cyan] header.active .menubar span{
+    background: #fff;
+}
+.menubar span.icon1.active {
+    transition: all .5s ease;
+    transform: rotate(45deg) translateX(5px) translateY(5px);
+}
 
+.menubar span.icon2.active {
+    transition: all .5s ease;
+    transform: rotate(130deg);
+}
+
+.team_content::before{
+    position: absolute;
+    content: "";
+    background: rgb(32, 32, 228);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    transition: .2s;
+}
+.team_item:hover .team_content::before{
+    bottom: 0;
+}
 
 
 

@@ -30,9 +30,7 @@ body{
 }
 
 .title{
-    background-image: linear-gradient(to right, var(--primary-color) 0%, #ffffff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #8750F7;
 }
 .hero_area_wrap:before {
     content: "";
@@ -90,11 +88,19 @@ body{
 }
 
 .marqqe_title h3{
-    @apply capitalize text-[40px] font-bold;
+    @apply capitalize md:text-[40px] font-bold text-xl;
 }
 .marqqImg {
-    @apply w-[60px] h-[60px] rounded-full bg-white overflow-hidden p-4;
+    @apply md:w-[60px] md:h-[60px] w-[40px] h-[40px] rounded-full bg-white overflow-hidden md:p-4 p-1;
 }
 .marqqImg img{
     @apply w-full;
 }
+.menuItem a{
+    @apply md:text-[60px] text-4xl font-bold uppercase text-white;
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+
