@@ -101,5 +101,9 @@ body{
     -webkit-text-stroke: 1px #fff;
     -webkit-text-fill-color: transparent;
 }
+.viewText{
+    @apply w-[100px] h-[100px] rounded-full bg-black absolute top-0 left-0 z-10 text-center flex items-center justify-center text-white text-xl opacity-0 pointer-events-none;
+    transform: translate(-50%,-50%);
+}
 
 
