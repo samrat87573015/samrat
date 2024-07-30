@@ -1,3 +1,18 @@
+
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollTrigger.normalizeScroll(true)
+
+// create the smooth scroller FIRST!
+let smoother = ScrollSmoother.create({
+    smooth: 2,
+    effects: true,
+    normalizeScroll: true
+});
+
+
+
 function heroAnimation() {
   gsap.set(".slides", {
     scale: 3,
@@ -8,8 +23,9 @@ function heroAnimation() {
     scrollTrigger: {
       trigger: ".hero_area",
       start: "top top",
-      end: "bottom bottom",
-      scrub: 3,
+      end: "+=300",
+      scrub: 2,
+        pin: true,
     },
   });
 
@@ -86,32 +102,61 @@ function bodyColorChangeAnimation(){
 bodyColorChangeAnimation();
 
 function scollSliderAnimation() {
+
     gsap.to(".slider_item", {
         scrollTrigger: {
             trigger: ".scrol_slider_area",
             start: "top top",
-            end: "bottom bottom",
+            end: "+=600",
             scrub: 2,
+            pin: true,
         },
         xPercent: -200,
         ease: Power4,
+        duration: 3,
     });
 }
 scollSliderAnimation();
 
-gsap.to('.abright_box', {
-    scrollTrigger: {
-        trigger: '.about',
-        start: "top 30%",
-        end: "bottom bottom",
-        scrub: 3,
+function aboutAnimation(){
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-    },
-    y: 100,
-    ease: Power4,
-    duration: 3,
-    stagger: 0.03,
-})
+    if(isMobile){
+        gsap.to('.abright_box', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: "top 30%",
+                end: "bottom bottom",
+                scrub: 3,
+
+            },
+            y: -300,
+            ease: Power4,
+            duration: 3,
+            stagger: 0.03,
+        });
+    }else {
+        gsap.to('.abright_box', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: "top 15%",
+                end: "+=1000",
+                pin: true,
+                scrub: 3,
+                markers: true,
+                duration: 3,
+
+            },
+            y: -1345,
+            ease: Power4,
+            duration: 2,
+            stagger: 0.03,
+        })
+    }
+}
+aboutAnimation();
+window.addEventListener("resize", aboutAnimation);
+
 
 
 Shery.mouseFollower({
@@ -141,9 +186,10 @@ Shery.textAnimate(".textAnimate" /* Element to target.*/, {
 gsap.to('.project_item', {
     scrollTrigger: {
         trigger: '.project_area',
-        start: "top top",
-        end: "bottom bottom",
+        start: "top 5%",
+        end: "+=600",
         scrub: 3,
+        pin: true,
     },
     y: 0,
     ease: Power4,
@@ -198,7 +244,6 @@ function teamAnimation() {
     });
 }
 teamAnimation();
-
 
 
 
