@@ -143,7 +143,6 @@ function aboutAnimation(){
                 end: "+=1000",
                 pin: true,
                 scrub: 3,
-                markers: true,
                 duration: 3,
 
             },
