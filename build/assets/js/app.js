@@ -1,11 +1,8 @@
 const lenis = new Lenis({
-    lerp: 0.05,
+    lerp: 0.08,
     smooth: true,
 })
 
-lenis.on('scroll', (e) => {
-    console.log(e)
-})
 
 lenis.on('scroll', ScrollTrigger.update)
 
@@ -127,7 +124,7 @@ function aboutAnimation() {
                 end: "bottom bottom",
                 scrub: 3,
             },
-            y: -100,
+            y: -0,
             ease: Power4,
             duration: 3,
             stagger: 0.03,
