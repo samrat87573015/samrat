@@ -127,7 +127,7 @@ function aboutAnimation() {
                 end: "bottom bottom",
                 scrub: 3,
             },
-            y: -300,
+            y: -100,
             ease: Power4,
             duration: 3,
             stagger: 0.03,
