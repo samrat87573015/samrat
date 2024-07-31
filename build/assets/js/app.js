@@ -1,43 +1,19 @@
+const lenis = new Lenis({
+    lerp: 0.05,
+    smooth: true,
+})
 
-//watch the free video on how this demo was made
-// https://www.snorkl.tv/scrolltrigger-smooth-scroll/
+lenis.on('scroll', (e) => {
+    console.log(e)
+})
 
+lenis.on('scroll', ScrollTrigger.update)
 
-const locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".scrollContainer"),
-    smooth: true
-});
+gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000)
+})
 
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-
-
-
-locoScroll.on("scroll", ScrollTrigger.update);
-
-// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy(".scrollContainer", {
-    scrollTop(value) {
-        return arguments.length ? locoScroll.scrollTo(value, 0, 0) :    locoScroll.scroll.instance.scroll.y;
-    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-    getBoundingClientRect() {
-        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-    },
-    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-    pinType: document.querySelector(".scrollContainer").style.transform ? "transform" : "fixed"
-});
-
-
-
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
-
-//watch the free video on how this demo was made
-// https://www.snorkl.tv/scrolltrigger-smooth-scroll/
-
-
+gsap.ticker.lagSmoothing(0)
 
 
 function heroAnimation() {
@@ -50,10 +26,8 @@ function heroAnimation() {
     scrollTrigger: {
       trigger: ".hero_area",
       start: "top top",
-      end: "+=600",
-      scrub: 2,
-        pin: true,
-        scroller:".scrollContainer",
+      end: "bottom bottom",
+      scrub: 3,
     },
   });
 
@@ -115,7 +89,6 @@ function bodyColorChangeAnimation(){
             trigger: e,
             start: "top 20%",
             end: "bottom 80%",
-            scroller:".scrollContainer",
             onEnter: function(){
                 document.body.setAttribute("theme", e.dataset.color);
                 header.setAttribute("theme", e.dataset.color);
@@ -131,54 +104,28 @@ function bodyColorChangeAnimation(){
 bodyColorChangeAnimation();
 
 function scollSliderAnimation() {
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    if(isMobile){
-        gsap.to(".slider_item", {
-            scrollTrigger: {
-                trigger: ".scrol_slider_area",
-                start: "top 50%",
-                end: "+=300",
-                scrub: 2,
-                pin: true,
-                scroller:".scrollContainer",
-            },
-            xPercent: -200,
-            ease: Power4,
-            duration: 3,
-        });
-    }else {
-        gsap.to(".slider_item", {
-            scrollTrigger: {
-                trigger: ".scrol_slider_area",
-                start: "top -90%",
-                end: "+=1200",
-                scrub: 2,
-                pin: true,
-                scroller:".scrollContainer",
-            },
-            xPercent: -200,
-            ease: Power4,
-            duration: 3,
-        });
-    }
-
+    gsap.to(".slider_item", {
+        scrollTrigger: {
+            trigger: ".scrol_slider_area",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 2,
+        },
+        xPercent: -200,
+        ease: Power4,
+    });
 }
 scollSliderAnimation();
-window.addEventListener("resize", scollSliderAnimation);
 
-function aboutAnimation(){
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-    if(isMobile){
-        gsap.to('.abright_box', {
+function aboutAnimation() {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (isMobile) {
+        gsap.to(".abright_box", {
             scrollTrigger: {
-                trigger: '.about',
+                trigger: ".about",
                 start: "top 30%",
                 end: "bottom bottom",
                 scrub: 3,
-                scroller:".scrollContainer",
-
             },
             y: -300,
             ease: Power4,
@@ -189,20 +136,19 @@ function aboutAnimation(){
         gsap.to('.abright_box', {
             scrollTrigger: {
                 trigger: '.about',
-                start: "top 15%",
-                end: "+=600",
-                pin: true,
+                start: "top 30%",
+                end: "bottom 80%",
                 scrub: 3,
-                scroller:".scrollContainer",
 
             },
-            y: -1345,
+            yPercent: -100,
             ease: Power4,
-            duration: 300,
+            duration: 3,
             stagger: 0.03,
         })
     }
 }
+
 aboutAnimation();
 window.addEventListener("resize", aboutAnimation);
 
@@ -235,11 +181,9 @@ Shery.textAnimate(".textAnimate" /* Element to target.*/, {
 gsap.to('.project_item', {
     scrollTrigger: {
         trigger: '.project_area',
-        start: "top 5%",
-        end: "+=1000",
+        start: "top top",
+        end: "bottom bottom",
         scrub: 3,
-        pin: true,
-        scroller:".scrollContainer",
     },
     y: 0,
     ease: Power4,
@@ -294,6 +238,7 @@ function teamAnimation() {
     });
 }
 teamAnimation();
+
 
 
 

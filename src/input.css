@@ -105,7 +105,31 @@ body{
     @apply w-[100px] h-[100px] rounded-full bg-black absolute top-0 left-0 z-10 text-center flex items-center justify-center text-white text-xl opacity-0 pointer-events-none;
     transform: translate(-50%,-50%);
 }
+
 .team_item .team_img{
     @apply pointer-events-none w-[300px] h-[300px];
 }
+
+
+/*lenis*/
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
 

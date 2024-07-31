@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>samrat</title>
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="./assets/css/custom.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -37,11 +36,10 @@
     </div>
 </header>
 
-<main id="smooth-wrapper" class="w-full scrollContainer">
-    <div id="smooth-content" class="div">
+<main id="main" class="w-full">
 
-    <section data-color="darkParpel" class="hero_area section w-full h-[100vh] relative">
-        <div  class="w-full sticky top-0 left-0">
+    <section data-color="darkParpel" class="hero_area section w-full h-[200vh] relative">
+        <div class="w-full sticky top-0 left-0">
             <div class="relative z-20">
                 <div style="--clip: 100%"
                      class="video_div w-full h-screen absolute z-10 top-0 left-0 overflow-hidden">
@@ -393,7 +391,7 @@
         </div>
     </section>
 
-    <section data-color="black" class="about section container flex gap-[50px] md:h-screen h-auto items-start flex-col md:flex-row px-4 sm:px-0">
+    <section data-color="black" class="about section container h-[300vh] flex gap-[50px] py-24 items-start flex-col md:flex-row px-4 sm:px-0">
         <div class="abcontent md:w-1/2 w-full space-y-6 md:sticky top-20">
             <p class="text-xl font-Josefin font-medium leading-snug">
 
@@ -505,9 +503,9 @@
         </div>
     </section>
 
-    <section data-color="cyan" class="scrol_slider_area section w-full h-[100vh]">
+    <section data-color="cyan" class="scrol_slider_area section w-full">
         <div class="">
-            <div class="sliders_wrapper relative">
+            <div class="sliders_wrapper h-[400vh] relative">
                 <div class="hrisliders flex overflow-hidden sticky top-0 left-0 w-full h-screen">
                     <div class="slider_item w-full flex-shrink-0 items-center h-screen relative">
                         <div class="hri_slider_content w-full flex h-full items-center justify-center">
@@ -570,7 +568,7 @@
         </div>
     </section>
 
-    <section data-color="black" class="project_area section w-full h-[120vh] relative">
+    <section data-color="black" class="project_area section w-full h-[300vh] relative">
         <div class="w-full h-[130vh] sticky top-[30px] left-0">
             <div class="container">
                 <div class="project_wrapper relative">
@@ -628,7 +626,7 @@
         </div>
     </section>
 
-    <section data-color="black" class="team_area section py-20">
+    <section data-color="white" class="team_area section py-20">
         <div class="container">
             <div class="team_wrapper">
                 <h2 class="text-4xl md:text-6xl capitalize text-center mb-10">Team members</h2>
@@ -645,7 +643,7 @@
                             <span class="font-bold sm:text-4xl text-xl group-hover:text-white">Ceo</span>
                         </div>
                     </div>
-                    <div class="team_img bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
+                    <div class="team_img w-[200px] h-[200px] bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
                         <img class="w-full h-full object-cover" src="assets/img/team/team1.png" alt=""/>
                     </div>
                 </div>
@@ -662,7 +660,7 @@
                             <span class="font-bold sm:text-4xl text-xl group-hover:text-white">Manager</span>
                         </div>
                     </div>
-                    <div class="team_img bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
+                    <div class="team_img w-[200px] h-[200px] bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
                         <img class="w-full h-full object-cover" src="assets/img/team/team2.png" alt=""/>
                     </div>
                 </div>
@@ -679,7 +677,7 @@
                             <span class="font-bold sm:text-4xl text-xl group-hover:text-white">UI/UX</span>
                         </div>
                     </div>
-                    <div class="team_img bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
+                    <div class="team_img w-[200px] h-[200px] bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
                         <img class="w-full h-full object-cover" src="assets/img/team/team3.png" alt=""/>
                     </div>
                 </div>
@@ -696,7 +694,7 @@
                             <span class="font-bold sm:text-4xl text-xl group-hover:text-white">Developer</span>
                         </div>
                     </div>
-                    <div class="team_img bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
+                    <div class="team_img w-[200px] h-[200px] bg-red-500 rounded-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 scale-[0] hidden md:block">
                         <img class="w-full h-full object-cover" src="assets/img/team/team1.png" alt=""/>
                     </div>
                 </div>
@@ -712,15 +710,14 @@
         </div>
     </footer>
 
-    </div>
+
 </main>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-<!--<script src="assets/js/ScrollSmoother.min.js"></script>-->
 <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+<script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

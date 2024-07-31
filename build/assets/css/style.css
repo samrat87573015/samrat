@@ -588,10 +588,6 @@ video {
   }
 }
 
-.visible{
-  visibility: visible;
-}
-
 .fixed{
   position: fixed;
 }
@@ -718,14 +714,6 @@ video {
   height: 100px;
 }
 
-.h-\[100vh\]{
-  height: 100vh;
-}
-
-.h-\[120vh\]{
-  height: 120vh;
-}
-
 .h-\[130vh\]{
   height: 130vh;
 }
@@ -738,8 +726,20 @@ video {
   height: 200px;
 }
 
+.h-\[200vh\]{
+  height: 200vh;
+}
+
 .h-\[2px\]{
   height: 2px;
+}
+
+.h-\[300vh\]{
+  height: 300vh;
+}
+
+.h-\[400vh\]{
+  height: 400vh;
 }
 
 .h-\[80px\]{
@@ -752,10 +752,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-auto{
-  height: auto;
 }
 
 .w-20{
@@ -870,10 +866,6 @@ video {
 .scale-\[1\]{
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1019,6 +1011,11 @@ video {
   padding-bottom: 5rem;
 }
 
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1119,10 +1116,6 @@ video {
 
 .opacity-50{
   opacity: 0.5;
-}
-
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-all{
@@ -1335,6 +1328,28 @@ body{
   width: 300px;
 }
 
+/*lenis*/
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 .hover\:rotate-0:hover{
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1387,10 +1402,6 @@ body{
 
   .md\:h-\[300px\]{
     height: 300px;
-  }
-
-  .md\:h-screen{
-    height: 100vh;
   }
 
   .md\:w-1\/2{
@@ -1457,4 +1468,5 @@ body{
     line-height: 1;
   }
 }
+
 
