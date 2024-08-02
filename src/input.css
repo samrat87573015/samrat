@@ -20,7 +20,10 @@
 }
 body{
     @apply font-Josefin;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
+
 
 
 .btn_primary{
@@ -113,7 +116,7 @@ body{
 }
 
 .project_item{
-    @apply max-w-[800px] absolute flex md:flex-row flex-col  translate-y-[800px] translate-x-[800px] border-2 border-gray-300 rounded-xl overflow-hidden;
+    @apply max-w-[800px] absolute flex md:flex-row flex-col translate-y-[800px] translate-x-[100px] border-2 border-gray-300 rounded-xl overflow-hidden;
 }
 .project_content{
     @apply p-10;

@@ -628,12 +628,16 @@ video {
   left: 50%;
 }
 
-.left-\[30px\]{
-  left: 30px;
+.left-\[10px\]{
+  left: 10px;
 }
 
-.left-\[60px\]{
-  left: 60px;
+.left-\[15px\]{
+  left: 15px;
+}
+
+.left-\[5px\]{
+  left: 5px;
 }
 
 .left-\[90px\]{
@@ -652,34 +656,6 @@ video {
   top: 5rem;
 }
 
-.top-\[30px\]{
-  top: 30px;
-}
-
-.top-\[60px\]{
-  top: 60px;
-}
-
-.top-\[80px\]{
-  top: 80px;
-}
-
-.top-\[90px\]{
-  top: 90px;
-}
-
-.left-\[10px\]{
-  left: 10px;
-}
-
-.left-\[15px\]{
-  left: 15px;
-}
-
-.left-\[5px\]{
-  left: 5px;
-}
-
 .top-\[10px\]{
   top: 10px;
 }
@@ -690,6 +666,14 @@ video {
 
 .top-\[5px\]{
   top: 5px;
+}
+
+.top-\[80px\]{
+  top: 80px;
+}
+
+.top-\[90px\]{
+  top: 90px;
 }
 
 .z-10{
@@ -1224,6 +1208,8 @@ video {
 
 body{
   font-family: Josefin Sans, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .btn_primary{
@@ -1416,7 +1402,7 @@ body{
   display: flex;
   max-width: 800px;
   --tw-translate-y: 800px;
-  --tw-translate-x: 800px;
+  --tw-translate-x: 100px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   flex-direction: column;
   overflow: hidden;
