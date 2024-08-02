@@ -10,7 +10,7 @@
     --secondary-color: #321961;
  }
 *{
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: var(--primary-color) var(--secondary-color);
 }
 
@@ -21,6 +21,8 @@
 body{
     @apply font-Josefin;
 }
+
+
 .btn_primary{
     @apply transition-all py-4 px-10 rounded-sm bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] text-white hover:from-[var(--secondary-color)] hover:to-[var(--primary-color)] hover:transition-all;
 }
@@ -109,6 +111,17 @@ body{
 .team_item .team_img{
     @apply pointer-events-none w-[300px] h-[300px];
 }
+
+.project_item{
+    @apply max-w-[800px] absolute flex md:flex-row flex-col  translate-y-[800px] translate-x-[800px] border-2 border-gray-300 rounded-xl overflow-hidden;
+}
+.project_content{
+    @apply p-10;
+}
+.project_img{
+    @apply w-full h-[200px] md:h-auto;
+}
+
 
 
 /*lenis*/

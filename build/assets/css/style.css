@@ -628,6 +628,18 @@ video {
   left: 50%;
 }
 
+.left-\[30px\]{
+  left: 30px;
+}
+
+.left-\[60px\]{
+  left: 60px;
+}
+
+.left-\[90px\]{
+  left: 90px;
+}
+
 .top-0{
   top: 0px;
 }
@@ -644,8 +656,40 @@ video {
   top: 30px;
 }
 
-.top-\[50px\]{
-  top: 50px;
+.top-\[60px\]{
+  top: 60px;
+}
+
+.top-\[80px\]{
+  top: 80px;
+}
+
+.top-\[90px\]{
+  top: 90px;
+}
+
+.left-\[10px\]{
+  left: 10px;
+}
+
+.left-\[15px\]{
+  left: 15px;
+}
+
+.left-\[5px\]{
+  left: 5px;
+}
+
+.top-\[10px\]{
+  top: 10px;
+}
+
+.top-\[15px\]{
+  top: 15px;
+}
+
+.top-\[5px\]{
+  top: 5px;
 }
 
 .z-10{
@@ -660,8 +704,16 @@ video {
   z-index: 30;
 }
 
-.z-\[-1\]{
-  z-index: -1;
+.z-\[1\]{
+  z-index: 1;
+}
+
+.z-\[2\]{
+  z-index: 2;
+}
+
+.z-\[3\]{
+  z-index: 3;
 }
 
 .my-1{
@@ -672,6 +724,11 @@ video {
 .my-1\.5{
   margin-top: 0.375rem;
   margin-bottom: 0.375rem;
+}
+
+.my-\[70px\]{
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .mb-10{
@@ -688,6 +745,14 @@ video {
 
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
 }
 
 .mt-8{
@@ -714,10 +779,6 @@ video {
   height: 100px;
 }
 
-.h-\[130vh\]{
-  height: 130vh;
-}
-
 .h-\[150px\]{
   height: 150px;
 }
@@ -728,6 +789,10 @@ video {
 
 .h-\[200vh\]{
   height: 200vh;
+}
+
+.h-\[250vh\]{
+  height: 250vh;
 }
 
 .h-\[2px\]{
@@ -847,11 +912,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-full{
-  --tw-translate-y: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .rotate-6{
   --tw-rotate: 6deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -935,6 +995,10 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-md{
+  border-radius: 0.375rem;
+}
+
 .rounded-xl{
   border-radius: 0.75rem;
 }
@@ -960,6 +1024,11 @@ video {
 .bg-\[\#0f0715\]{
   --tw-bg-opacity: 1;
   background-color: rgb(15 7 21 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#8750F7\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(135 80 247 / var(--tw-bg-opacity));
 }
 
 .bg-black{
@@ -1042,6 +1111,10 @@ video {
   text-align: center;
 }
 
+.text-end{
+  text-align: end;
+}
+
 .font-Josefin{
   font-family: Josefin Sans, sans-serif;
 }
@@ -1080,6 +1153,11 @@ video {
   line-height: 1.5rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1114,6 +1192,11 @@ video {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .opacity-50{
   opacity: 0.5;
 }
@@ -1130,7 +1213,7 @@ video {
 }
 
 *{
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: var(--primary-color) var(--secondary-color);
 }
 
@@ -1328,6 +1411,42 @@ body{
   width: 300px;
 }
 
+.project_item{
+  position: absolute;
+  display: flex;
+  max-width: 800px;
+  --tw-translate-y: 800px;
+  --tw-translate-x: 800px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+@media (min-width: 768px){
+  .project_item{
+    flex-direction: row;
+  }
+}
+
+.project_content{
+  padding: 2.5rem;
+}
+
+.project_img{
+  height: 200px;
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .project_img{
+    height: auto;
+  }
+}
+
 /*lenis*/
 
 html.lenis, html.lenis body {
@@ -1366,6 +1485,30 @@ html.lenis, html.lenis body {
 }
 
 @media (min-width: 640px){
+  .sm\:left-\[30px\]{
+    left: 30px;
+  }
+
+  .sm\:left-\[60px\]{
+    left: 60px;
+  }
+
+  .sm\:left-\[90px\]{
+    left: 90px;
+  }
+
+  .sm\:top-\[30px\]{
+    top: 30px;
+  }
+
+  .sm\:top-\[60px\]{
+    top: 60px;
+  }
+
+  .sm\:top-\[90px\]{
+    top: 90px;
+  }
+
   .sm\:px-0{
     padding-left: 0px;
     padding-right: 0px;

@@ -1,16 +1,19 @@
-const lenis = new Lenis({
-    lerp: 0.08,
-    smooth: true,
-})
+function smoothScroll() {
+    const lenis = new Lenis({
+        //lerp: 0.08,
+        smooth: true,
+    })
 
+    lenis.on('scroll', ScrollTrigger.update)
 
-lenis.on('scroll', ScrollTrigger.update)
+    gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+    })
 
-gsap.ticker.add((time)=>{
-    lenis.raf(time * 1000)
-})
+    gsap.ticker.lagSmoothing(0)
+}
+smoothScroll();
 
-gsap.ticker.lagSmoothing(0)
 
 
 function heroAnimation() {
@@ -183,6 +186,7 @@ gsap.to('.project_item', {
         scrub: 3,
     },
     y: 0,
+    x: 0,
     ease: Power4,
     duration: 3,
     stagger: 3,
